@@ -8,6 +8,7 @@ const authorE1 = document.getElementById("author");
 
 
 const apiURL = "https://api.quotable.io/random";
+const newApi = 'https://zenquotes.io/api/random';
 
 async function getQuote(){
 
@@ -16,7 +17,7 @@ async function getQuote(){
         btnE1.disabled = true;
         quoteE1.innerText = "Updating...";
         authorE1.innerText = "Updating...";
-        const response = await fetch(apiURL);
+        const response = await fetch(newApi);
         const data =  await response.json();
         const quoteContent = data.content;
         const quoteAuthor = data.author;
